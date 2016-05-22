@@ -12,6 +12,8 @@
 		8C146E731CF15465003A7013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C146E711CF15465003A7013 /* Main.storyboard */; };
 		8C146E751CF15465003A7013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C146E741CF15465003A7013 /* Assets.xcassets */; };
 		8C146E781CF15465003A7013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C146E761CF15465003A7013 /* LaunchScreen.storyboard */; };
+		8C146E821CF18B98003A7013 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C146E811CF18B98003A7013 /* Client.swift */; };
+		8C146E841CF18D99003A7013 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C146E831CF18D99003A7013 /* SecondView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8C146E741CF15465003A7013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C146E771CF15465003A7013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C146E791CF15465003A7013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C146E811CF18B98003A7013 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		8C146E831CF18D99003A7013 /* SecondView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +58,10 @@
 		8C146E6C1CF15465003A7013 /* Hello */ = {
 			isa = PBXGroup;
 			children = (
+				8C146E811CF18B98003A7013 /* Client.swift */,
 				8C146E6D1CF15465003A7013 /* AppDelegate.swift */,
 				8C146E6F1CF15465003A7013 /* ViewController.swift */,
+				8C146E831CF18D99003A7013 /* SecondView.swift */,
 				8C146E711CF15465003A7013 /* Main.storyboard */,
 				8C146E741CF15465003A7013 /* Assets.xcassets */,
 				8C146E761CF15465003A7013 /* LaunchScreen.storyboard */,
@@ -137,6 +143,8 @@
 			files = (
 				8C146E701CF15465003A7013 /* ViewController.swift in Sources */,
 				8C146E6E1CF15465003A7013 /* AppDelegate.swift in Sources */,
+				8C146E841CF18D99003A7013 /* SecondView.swift in Sources */,
+				8C146E821CF18B98003A7013 /* Client.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
