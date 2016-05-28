@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7c-vx-h1O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7c-vx-h1O">
                                 <rect key="frame" x="20" y="20" width="560" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="MtB-v8-qvN"/>
@@ -37,21 +38,51 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ywm-uN-nWO">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ywm-uN-nWO">
                                 <rect key="frame" x="20" y="49" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uq0-3f-Rez">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.89377945889999999" green="0.89377945889999999" blue="0.89377945889999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="yfx-5Y-gMK"/>
+                                </constraints>
+                                <color key="tintColor" red="0.27329727564102568" green="0.27329727564102568" blue="0.27329727564102568" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Show Message"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="yfx-5Y-gMK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="yfx-5Y-gMK"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="onShowMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdL-UC-tGk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6uQ-KS-ciz">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.89377945889999999" green="0.89377945889999999" blue="0.89377945889999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="161" id="Bda-bJ-vlW"/>
+                                </constraints>
+                                <color key="tintColor" red="0.2732972756" green="0.2732972756" blue="0.2732972756" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Open Second Screen"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Bda-bJ-vlW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Bda-bJ-vlW"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="onOpenSeconScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HuC-xu-9RB"/>
                                 </connections>
@@ -59,12 +90,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6uQ-KS-ciz" firstAttribute="top" secondItem="Uq0-3f-Rez" secondAttribute="bottom" constant="8" id="3Cd-Qw-fGd"/>
                             <constraint firstItem="Ywm-uN-nWO" firstAttribute="top" secondItem="z7c-vx-h1O" secondAttribute="bottom" constant="8" id="BFS-QK-tGW"/>
+                            <constraint firstItem="6uQ-KS-ciz" firstAttribute="leading" secondItem="Uq0-3f-Rez" secondAttribute="leading" id="C7h-Cx-MCX"/>
                             <constraint firstItem="z7c-vx-h1O" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EEX-H3-Wk8"/>
                             <constraint firstItem="z7c-vx-h1O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HZN-OA-uqZ"/>
-                            <constraint firstItem="6uQ-KS-ciz" firstAttribute="top" secondItem="Ywm-uN-nWO" secondAttribute="bottom" constant="8" id="IoL-Ll-dh5"/>
                             <constraint firstItem="z7c-vx-h1O" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="M3J-t5-CVp"/>
-                            <constraint firstItem="6uQ-KS-ciz" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="SEd-Sc-ucE"/>
                             <constraint firstItem="Ywm-uN-nWO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="YvJ-00-oDJ"/>
                             <constraint firstItem="Ywm-uN-nWO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gYq-Ch-HKJ"/>
                             <constraint firstItem="Uq0-3f-Rez" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hgl-7o-WYK"/>
@@ -78,8 +109,8 @@
                             <mask key="constraints">
                                 <exclude reference="hgl-7o-WYK"/>
                                 <exclude reference="iTa-wu-yaG"/>
-                                <exclude reference="IoL-Ll-dh5"/>
-                                <exclude reference="SEd-Sc-ucE"/>
+                                <exclude reference="3Cd-Qw-fGd"/>
+                                <exclude reference="C7h-Cx-MCX"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -90,8 +121,8 @@
                             <mask key="constraints">
                                 <include reference="hgl-7o-WYK"/>
                                 <include reference="iTa-wu-yaG"/>
-                                <include reference="IoL-Ll-dh5"/>
-                                <include reference="SEd-Sc-ucE"/>
+                                <include reference="3Cd-Qw-fGd"/>
+                                <include reference="C7h-Cx-MCX"/>
                             </mask>
                         </variation>
                     </view>
@@ -103,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565" y="375"/>
+            <point key="canvasLocation" x="564" y="375"/>
         </scene>
         <!--Second View-->
         <scene sceneID="wgn-RB-MuT">
@@ -114,6 +145,7 @@
                         <viewControllerLayoutGuide type="bottom" id="9m7-Pi-IvR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XGO-9B-RBG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Du-Y2-cgg">
